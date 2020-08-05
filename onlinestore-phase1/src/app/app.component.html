@@ -1,0 +1,23 @@
+<h3 class="bg-primary text-white p-3">Online STORE</h3>
+<div class="my-1">
+  <ul>
+    <li><a 
+      routerLink=""
+      routerLinkActive="Active"
+      [routerLinkActiveOptions]="{exact:true}">Home</a>
+    </li>
+    <li><a 
+      routerLink="/category"
+      routerLinkActive="Active"
+      [queryParams]="{id:1}"
+      [routerLinkActiveOptions]="{exact:true}">Category 1</a>
+    </li>
+    <li><a 
+      routerLink="/category"
+      routerLinkActive="Active"
+      [queryParams]="{id:2}"
+      [routerLinkActiveOptions]="{exact:true}">Category 2</a>
+    </li>
+  </ul>
+</div>
+<router-outlet></router-outlet>

@@ -1,0 +1,18 @@
+{
+    "id" : 2,
+    "name" : "Sport",
+    "items" : [
+        {"id":1,"name":"T-Shirt","price":100.00,"shortdesc":"This is a simple t-shirt"},
+        {"id":2,"name":"Baskets","price":75.00,"shortdesc":"This is a pair"},
+        {"id":3,"name":"Socks","price":45.00,"shortdesc":"This is a pair of socks"},
+        {"id":4,"name":"Watch","price":10.00,"shortdesc":"This is a simple watch"},
+        {"id":5,"name":"Ball","price":29.00,"shortdesc":"This is a simple ball"},
+        {"id":6,"name":"K-Way","price":38.00,"shortdesc":"This is a simple K-Way"},
+        {"id":7,"name":"Bike","price":29.99,"shortdesc":"This is a simple bike"},
+        {"id":8,"name":"Glasses","price":15.99,"shortdesc":"This is a simple pair of glasses"},
+        {"id":9,"name":"Sweat","price":150.00,"shortdesc":"This is a simple sweat"},
+        {"id":10,"name":"T-Shirt 2","price":65.99,"shortdesc":"This is a simple t-shirt 2"},
+        {"id":11,"name":"T-Shirt 3","price":14.99,"shortdesc":"This is a simple t-shirt 3"},
+        {"id":12,"name":"T-Shirt 4","price":25.00,"shortdesc":"This is a simple t-shirt 4"}
+    ]
+}
