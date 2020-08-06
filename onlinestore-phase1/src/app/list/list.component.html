@@ -1,15 +1,13 @@
-<div class="my-1" *ngFor="let item of category.items.slice(nbperpage*(currentpage-1),(nbperpage*currentpage)-1); let idx = index;">
-    <div>{{item.name}}</div>
-    <div>{{item.price}}</div>
-    <div>{{item.shortdesc}}</div>
+<div class="my-1" *ngFor="let itemid of category.itemids.slice(nbperpage*(currentpage-1),nbperpage*currentpage); let idx = index;">
+    <app-productshortdesc [id]="itemid"></app-productshortdesc>
 </div>
 <div class="my-1">
   <div >
     <select #nbperpageselector [(ngModel)]="nbperpage">
-      <option value="{{idx}}" *ngFor="let idx of [] | range:5:(category.items|len)+5:5">{{idx}}</option>
+      <option value="{{idx}}" *ngFor="let idx of [] | range:5:(category.itemids|len)+5:5">{{idx}}</option>
     </select>
   </div> 
-  <label *ngFor="let cnt of [] | range:1:(category.items|len)+(nbperpage-0)-(nbperpage-0):nbperpage; let idx = index;">
+  <label *ngFor="let cnt of [] | range:1:(category.itemids|len)+(nbperpage-0)-(nbperpage-0):nbperpage; let idx = index;">
     <input type="radio" name="pageselector" [value]="idx+1" [(ngModel)]="currentpage" [checked]="idx+1 == currentpage" >{{idx+1}}
   </label>
   <button (click)="onClick()">check</button>

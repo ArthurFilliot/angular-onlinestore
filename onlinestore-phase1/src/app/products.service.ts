@@ -2,11 +2,12 @@ import { Injectable, OnDestroy } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable, throwError, Subject } from 'rxjs'
 import { catchError, takeUntil } from 'rxjs/operators'
-'use strict';
+
 @Injectable({
   providedIn: 'root'
 })
-export class CategoriesService implements OnDestroy {
+export class ProductsService implements OnDestroy {
+
   private unsubscribe$ = new Subject<void>();
   
   constructor(private http: HttpClient) { }
@@ -25,23 +26,23 @@ export class CategoriesService implements OnDestroy {
     return throwError('Please try again,')
   }
 
-  getData(categoryid: number) {
-    let path = `/assets/category_${categoryid}.json`
+  getData(id: number) {
+    let path = `/assets/product_${id}.json`
     return this.http
-      .get<Category>(path)
+      .get<Product>(path)
       .pipe(takeUntil(this.unsubscribe$))
       .pipe(catchError(this.showError));
   }  
 
-  nullCategory(): Category {
-    return {id:0,name:"",itemids:[]}
+  nullProduct(): Product {
+    return {id:0}
   };
-
 }
 
-
-export interface Category {
+export interface Product {
   id: number,
-  name: string,
-  itemids: any[]
+  name?: string,
+  price?: number,
+  shortdesc?: string,
+  fulldesc?: string
 }

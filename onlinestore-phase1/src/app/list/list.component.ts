@@ -12,7 +12,7 @@ export class ListComponent implements OnInit, OnChanges {
 
   @Input('categoryid') categoryid;
 
-  category
+  category: Category
 
   nbperpage: number = 5
 
@@ -22,10 +22,14 @@ export class ListComponent implements OnInit, OnChanges {
 
   constructor(private categoriesService:CategoriesService) { 
     this.category = categoriesService.nullCategory()
+    console.log("construct : ")
+    console.log(this.category)
   }
 
   load() {
     this.categoriesService.getData(this.categoryid).subscribe(data => {
+      console.log("load")
+      console.log(data)
       this.category=data
       console.log(this.category)
     })
