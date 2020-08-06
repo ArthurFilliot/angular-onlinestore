@@ -2,13 +2,15 @@
     <app-productshortdesc [id]="itemid"></app-productshortdesc>
 </div>
 <div class="my-1">
-  <div >
-    <select #nbperpageselector [(ngModel)]="nbperpage">
+  <div class="form-inline float-left mr-1">
+    <select class="form-control" #nbperpageselector [(ngModel)]="nbperpage">
       <option value="{{idx}}" *ngFor="let idx of [] | range:5:(category.itemids|len)+5:5">{{idx}}</option>
     </select>
   </div> 
-  <label *ngFor="let cnt of [] | range:1:(category.itemids|len)+(nbperpage-0)-(nbperpage-0):nbperpage; let idx = index;">
-    <input type="radio" name="pageselector" [value]="idx+1" [(ngModel)]="currentpage" [checked]="idx+1 == currentpage" >{{idx+1}}
-  </label>
-  <button (click)="onClick()">check</button>
+  <div class="btn-group float-right">
+    <label class="btn btn-outline-dark" [class.active]="idx+1 == currentpage" *ngFor="let cnt of [] | range:1:(category.itemids|len)+(nbperpage-0)-(nbperpage-0):nbperpage; let idx = index;">
+      {{idx+1}}
+      <input style="display: none;" type="radio" name="pageselector" [value]="idx+1" [(ngModel)]="currentpage" [checked]="idx+1 == currentpage">
+    </label>
+  </div>
 </div> 
