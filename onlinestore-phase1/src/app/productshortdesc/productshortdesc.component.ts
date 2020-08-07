@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ProductsService, Product } from './../products.service';
-
+import { CartModel, CartBO } from '../cart.model';
 
 @Component({
   selector: 'app-productshortdesc',
@@ -13,7 +13,7 @@ export class ProductshortdescComponent implements OnInit {
 
   product: Product
 
-  constructor(private productsService:ProductsService) { 
+  constructor(private productsService:ProductsService, private cart:CartModel) { 
     this.product = productsService.nullProduct()
   }
 
@@ -27,8 +27,9 @@ export class ProductshortdescComponent implements OnInit {
     })
   }
 
-  
-
-
+  addProductToCart(product:Product) {
+    let cartbo = new CartBO(this.cart) 
+    cartbo.addLine(product)
+  }
 
 }

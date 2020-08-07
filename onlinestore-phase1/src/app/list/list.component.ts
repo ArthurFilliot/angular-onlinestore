@@ -1,3 +1,5 @@
+import { ProductsService, Product } from './../products.service';
+import { CartModel, CartBO } from './../cart.model';
 import { CategoriesService, Category } from './../categories.service';
 import { Component, OnInit, Input, AfterContentInit, OnChanges, SimpleChanges } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
@@ -43,10 +45,6 @@ export class ListComponent implements OnInit, OnChanges {
     console.log("changes from list:" + this.unid)
     this.load();
     console.log(this.category)
-  }
-
-  onClick() {
-    console.log(this.currentpage+"-"+this.nbperpage)
   }
 
 }

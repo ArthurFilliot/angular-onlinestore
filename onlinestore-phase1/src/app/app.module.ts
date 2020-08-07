@@ -1,3 +1,5 @@
+import { CartModel } from './cart.model';
+import { ProductsService } from './products.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
@@ -12,6 +14,7 @@ import { ListComponent } from './list/list.component';
 
 import { CategoriesService } from './categories.service';
 import { ProductshortdescComponent } from './productshortdesc/productshortdesc.component';
+import { CartsummaryComponent } from './cartsummary/cartsummary.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,8 @@ import { ProductshortdescComponent } from './productshortdesc/productshortdesc.c
     CategoryComponent,
     HomeComponent,
     ListComponent,
-    ProductshortdescComponent
+    ProductshortdescComponent,
+    CartsummaryComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +33,7 @@ import { ProductshortdescComponent } from './productshortdesc/productshortdesc.c
     FormsModule
   ],
   providers: [
-    CategoriesService
+    CategoriesService, ProductsService, CartModel
   ],
   bootstrap: [AppComponent]
 })
