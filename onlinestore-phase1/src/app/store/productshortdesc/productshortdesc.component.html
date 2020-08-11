@@ -1,8 +1,8 @@
 {{product.name}}
-<span class="badge badge-pill badge-primary float-right">{{product.price|currency}}</span>
+<span class="badge badge-pill badge-danger float-right">{{product.price|currency}}</span>
 <div class="card-text bg-dark p-1">
     {{product.shortdesc}}
-    <button class="btn btn-success btn-sm float-right"
+    <button class="btn btn-info btn-sm float-right"
         (click)="addProductToCart(product)">
         Add to Cart
     </button>

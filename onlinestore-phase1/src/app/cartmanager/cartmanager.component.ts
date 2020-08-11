@@ -1,3 +1,4 @@
+import { CartModel, CartBO, CartLineModel } from './../cart.model';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -5,11 +6,22 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './cartmanager.component.html',
   styleUrls: ['./cartmanager.component.css']
 })
-export class CartmanagerComponent implements OnInit {
+export class CartmanagerComponent  {
 
-  constructor() { }
+  cart:CartModel
 
-  ngOnInit(): void {
+  constructor(mcart:CartModel) {
+    this.cart = mcart
+  }
+
+  update(line: CartLineModel, quantity:number) {
+    (new CartBO(this.cart))
+      .updateQuantity(line.product,quantity)
+  }
+
+  remove(line: CartLineModel) {
+    (new CartBO(this.cart))
+      .removeLine(line.product.id)
   }
 
 }

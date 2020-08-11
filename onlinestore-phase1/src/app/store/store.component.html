@@ -15,12 +15,10 @@
             [routerLink]="[{ outlets: { primary: ['store'],ostore: ['home'] }}]"
             routerLinkActive="active"
             [routerLinkActiveOptions]="{exact:true}">Home</button>
-           <button 
+           <button *ngFor="let cat of []|range:1:2:1"
             class="btn btn-block btn-outline-dark"
-            (click)="currentcategory=1">Category 1</button>
-           <button 
-            class="btn btn-block btn-outline-dark"
-            (click)="currentcategory=2">Category 2</button>
+            [class.active]="currentcategory==cat"
+            (click)="currentcategory=cat">Category {{cat}}</button>
         </div>
       </div>
       <div class="col-9 bg-success p-2">
