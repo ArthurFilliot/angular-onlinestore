@@ -1,3 +1,4 @@
+import { Product } from '../product.interface';
 import { Injectable, OnDestroy } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable, throwError, Subject } from 'rxjs'
@@ -37,12 +38,4 @@ export class ProductsService implements OnDestroy {
   nullProduct(): Product {
     return {id:0}
   };
-}
-
-export interface Product {
-  id: number,
-  name?: string,
-  price?: number,
-  shortdesc?: string,
-  fulldesc?: string
 }

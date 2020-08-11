@@ -1,5 +1,5 @@
-import { ProductsService, Product } from './../products.service';
-import { CartModel, CartBO } from './../cart.model';
+import { ProductsService } from './../products.service';
+import { CartModel, CartBO } from '../../cart.model';
 import { CategoriesService, Category } from './../categories.service';
 import { Component, OnInit, Input, AfterContentInit, OnChanges, SimpleChanges } from '@angular/core';
 import { HttpClient } from '@angular/common/http';

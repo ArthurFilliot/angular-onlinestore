@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HomeComponent } from './home/home.component';
+import { HomeComponent } from './store/home/home.component';
 import { Router, RouterStateSnapshot, ActivatedRouteSnapshot } from '@angular/router';
 
 @Injectable({
