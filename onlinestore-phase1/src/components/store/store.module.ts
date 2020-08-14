@@ -1,17 +1,8 @@
+import { PipesModule } from './../../pipes/pipes.module';
 import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { AppRoutingModule } from '../app-routing.module';
-import { HttpClientModule}  from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-
-import { PipesModule } from "../pipes/pipes.module";
-import { CartModel } from '../cart.model';
-import { Product } from '../product.interface';
-
-
-import { ProductsService } from './products.service';
-import { CategoriesService } from './categories.service';
 
 import { CategoryComponent } from './category/category.component';
 import { HomeComponent } from './home/home.component';
@@ -30,16 +21,13 @@ import { StoreComponent } from './store.component';
     StoreComponent
   ],
   imports: [
-    BrowserModule, 
-    AppRoutingModule,
-    HttpClientModule,
-    PipesModule,
     FormsModule,
-    RouterModule
+    RouterModule,
+    PipesModule,
+    BrowserModule
   ],
-  providers: [
-    CategoriesService, ProductsService, CartModel
-  ],
-  exports: []
+  exports: [
+    StoreComponent
+  ]
 })
 export class StoreModule { }

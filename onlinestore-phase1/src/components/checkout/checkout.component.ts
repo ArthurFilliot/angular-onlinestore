@@ -1,3 +1,4 @@
+import { Order } from '../componentsservices.module';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -5,9 +6,9 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './checkout.component.html',
   styleUrls: ['./checkout.component.css']
 })
-export class CheckoutComponent implements OnInit {
+export class CheckoutComponent implements OnInit { 
 
-  constructor() { }
+  constructor(order:Order) { }
 
   ngOnInit(): void {
   }

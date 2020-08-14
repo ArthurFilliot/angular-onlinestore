@@ -1,14 +1,12 @@
-import { StoreModule } from './store/store.module';
+import { StoreModule } from '../components/store/store.module';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { HomeFirstGuard } from './homefirst.guard';
 
-import { CartmanagerComponent } from './cartmanager/cartmanager.component';
-import { CheckoutComponent } from './checkout/checkout.component';
-import { StoreComponent } from './store/store.component';
-import { CategoryComponent } from './store/category/category.component';
-import { HomeComponent } from './store/home/home.component';
+import { CartmanagerComponent } from '../components/components.module';
+import { CheckoutComponent } from '../components/components.module';
+import { StoreComponent } from '../components/components.module';
 
 const routes: Routes = [
   {

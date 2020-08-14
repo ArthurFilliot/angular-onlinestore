@@ -9,6 +9,4 @@ export class StoreComponent {
 
   currentcategory=1;
 
- 
-
 }

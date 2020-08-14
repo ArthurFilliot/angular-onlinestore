@@ -1,9 +1,7 @@
 import { Injectable } from '@angular/core';
-import { Product } from './product.interface';
+import { Product } from './products.service';
 
-@Injectable({
-    providedIn: 'root'
-})
+@Injectable({providedIn:'root'})
 export class CartModel {
     public lines: CartLineModel[] = []; 
     public itemcount: number = 0;

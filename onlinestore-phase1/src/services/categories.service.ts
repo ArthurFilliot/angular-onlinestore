@@ -3,9 +3,8 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable, throwError, Subject } from 'rxjs'
 import { catchError, takeUntil } from 'rxjs/operators'
 'use strict';
-@Injectable({
-  providedIn: 'root'
-})
+
+@Injectable({providedIn:'root'})
 export class CategoriesService implements OnDestroy {
   private unsubscribe$ = new Subject<void>();
   
@@ -38,7 +37,6 @@ export class CategoriesService implements OnDestroy {
   };
 
 }
-
 
 export interface Category {
   id: number,

@@ -1,9 +1,5 @@
-import { ProductsService } from './../products.service';
-import { CartModel, CartBO } from '../../cart.model';
-import { CategoriesService, Category } from './../categories.service';
 import { Component, OnInit, Input, AfterContentInit, OnChanges, SimpleChanges } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { CategoriesService, Category } from '../../componentsservices.module';
 
 @Component({
   selector: 'app-list',

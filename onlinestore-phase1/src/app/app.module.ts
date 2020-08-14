@@ -1,5 +1,5 @@
-import { StoreComponent } from './store/store.component';
-import { HomeComponent } from './store/home/home.component';
+import { StoreComponent,CartmanagerComponent,CheckoutComponent } from '../components/components.module'; 
+
 import { AppComponent } from './app.component';
 
 import { RouterModule } from '@angular/router';
@@ -9,17 +9,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule}  from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
-import { PipesModule } from "./pipes/pipes.module";
-import { StoreModule } from "./store/store.module";
-
-import { CartmanagerComponent } from './cartmanager/cartmanager.component';
-import { CheckoutComponent } from './checkout/checkout.component';
+import { PipesModule } from "../pipes/pipes.module";
 
 @NgModule({
   declarations: [
     AppComponent,
-    CartmanagerComponent,
-    CheckoutComponent
   ],
   imports: [
     BrowserModule,

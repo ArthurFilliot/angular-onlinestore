@@ -1,8 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ProductsService } from './../products.service';
-import { CartModel, CartBO } from '../../cart.model';
 import { Router } from '@angular/router';
-import { Product } from 'src/app/product.interface';
+import { Product, ProductsService, CartModel, CartBO  } from '../../componentsservices.module';
 
 @Component({
   selector: 'app-productshortdesc',

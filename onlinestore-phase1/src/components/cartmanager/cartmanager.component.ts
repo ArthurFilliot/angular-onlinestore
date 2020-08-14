@@ -1,4 +1,4 @@
-import { CartModel, CartBO, CartLineModel } from './../cart.model';
+import { CartModel, CartBO, CartLineModel } from '../componentsservices.module';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
