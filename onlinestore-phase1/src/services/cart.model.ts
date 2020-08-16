@@ -54,12 +54,19 @@ export class CartBO {
     }
 
     private recalc() {
-        let sums = 
+        let qtys = 
             this.cart.lines
                 .map(l=>[l.quantity,this.getLineTotal(l)])
-                .reduce((acc, curr) => [acc[0] + curr[0], acc[1] + curr[1]])
-        this.cart.itemcount = sums[0];
-        this.cart.cartprice = sums[1];
+        if (qtys.length>0) {
+            let sums = 
+                qtys
+                    .reduce((acc, curr) => [acc[0] + curr[0], acc[1] + curr[1]])
+            this.cart.itemcount = sums[0];
+            this.cart.cartprice = sums[1];
+        }else{
+            this.cart.itemcount = 0;
+            this.cart.cartprice = 0;
+        }
     }
 
 }

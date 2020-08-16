@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from "@angular/common";
 import { RouterModule } from '@angular/router';
-
+import { FormsModule } from '@angular/forms';
 
 import { CheckoutComponent } from './checkout/checkout.component';
 import { StoreComponent } from './store/store.component';
@@ -24,7 +24,8 @@ export { StoreComponent } from './store/store.component';
         BrowserModule,
         CommonModule,
         RouterModule,
-        StoreModule
+        StoreModule,
+        FormsModule
     ],
     providers: [],
     exports: [
