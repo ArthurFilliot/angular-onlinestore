@@ -1,4 +1,4 @@
-# angular-onlinestore-phase1
+# angular-onlinestore
 Udemy - Angular - from zero to hero - Online Store
 
 The basic auth part is taken from : 
