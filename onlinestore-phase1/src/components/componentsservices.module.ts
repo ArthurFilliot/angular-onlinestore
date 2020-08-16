@@ -4,7 +4,8 @@ export { Product, ProductsService ,
 Category, CategoriesService,
 CartModel, CartBO, CartLineModel,
 Order,
-OrdersService } from '../services/services.module';
+OrdersService,
+User,UserService,AuthenticationService } from '../services/services.module';
 
 @NgModule({
     declarations: [

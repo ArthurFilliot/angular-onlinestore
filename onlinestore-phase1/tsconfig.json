@@ -7,14 +7,21 @@
 {
   "files": [],
   "references": [
-    {
-      "path": "./tsconfig.app.json"
-    },
-    {
-      "path": "./tsconfig.spec.json"
-    },
-    { 
-      "importHelpers": true
-    }
-]
+      {
+        "path": "./tsconfig.app.json"
+      },
+      {
+        "path": "./tsconfig.spec.json"
+      },
+      { 
+        "importHelpers": true
+      }
+    ],
+   "compilerOptions": {
+      "baseUrl": "./",
+      "paths": {
+        "@app/*": ["src/app/*"],
+        "@environments/*": ["src/environments/*"]
+      }
+  }
 }

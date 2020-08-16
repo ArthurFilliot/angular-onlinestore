@@ -3,10 +3,13 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { HomeFirstGuard } from './homefirst.guard';
+import { AuthGuard } from './auth.guard';
 
 import { CartmanagerComponent } from '../components/components.module';
 import { CheckoutComponent } from '../components/components.module';
 import { StoreComponent } from '../components/components.module';
+import { AdminComponent } from '../components/components.module';
+import { LoginComponent } from 'src/components/login/login.component';
 
 const routes: Routes = [
   {
@@ -32,6 +35,17 @@ const routes: Routes = [
     component: CheckoutComponent,
     outlet: 'primary',
     canActivate:[HomeFirstGuard]
+  },
+  {
+    path:'admin',
+    component: AdminComponent,
+    outlet: 'primary',
+    canActivate:[AuthGuard]
+  },
+  {
+    path:'login',
+    component: LoginComponent,
+    outlet: 'primary'
   },
   {
     path:'*',
